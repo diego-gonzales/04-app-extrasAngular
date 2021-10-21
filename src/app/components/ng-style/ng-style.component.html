@@ -1,0 +1,13 @@
+<h1>NG-STYLE</h1>
+<hr>
+
+<!-- <p [ngStyle]="{'font-size': size + 'px', 'color': 'red'}">ng-style works!</p> -->
+<!-- <p [style.fontSize]="'20px'">ng-style works!</p> -->
+<p [style.fontSize.px]="size">ng-style works!</p>
+
+<button class="btn btn-primary mx-2" (click)="size = size + 5">
+  <i class="fa fa-plus"></i>
+</button>
+<button class="btn btn-primary mx-2" (click)="size = size - 5">
+  <i class="fa fa-minus"></i>
+</button>

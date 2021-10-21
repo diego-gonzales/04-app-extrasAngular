@@ -1,0 +1,36 @@
+<h1>NG-CLASS</h1>
+<hr>
+
+<div class="alert" [ngClass]="alertType">
+  <strong>Well done!</strong> You successfully read this important alert message.
+</div>
+
+<button class="btn btn-info mx-2" (click)="alertType = 'alert-info'">
+  Change to Alert Info
+</button>
+<button class="btn btn-success mx-2" (click)="alertType = 'alert-success'">
+  Change to Alert Success
+</button>
+
+<div class="mt-2">
+  <h5 [ngClass]="{'text-danger': properties.danger, 'text-info': !properties.danger}">Hello World</h5>
+</div>
+
+<button class="btn"
+        [ngClass]="{'btn-danger': properties.danger, 'btn-info': !properties.danger}"
+        (click)="properties.danger = !properties.danger">
+  Change color
+</button>
+
+<br>
+
+<h3>Async Process</h3>
+<button class="btn btn-primary"
+        type="button"
+        (click)="saveChanges()"
+        [disabled]="isLoading">
+  <i class="fa"
+    [ngClass]="{'fa-save': !isLoading, 'fa-refresh fa-spin': isLoading}">
+  </i>
+  {{ isLoading ? 'Saving Changes' : 'Save Changes'}}
+</button>

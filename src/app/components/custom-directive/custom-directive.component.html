@@ -1,0 +1,14 @@
+<h1>CUSTOM DIRECTIVE</h1>
+<hr>
+<p [appHighlight]="color" defaultColor="blue">
+  Highlight me!
+</p>
+<div>
+  <input type="radio" name="colors" (click)="color='lightgreen'">Green
+  <input type="radio" name="colors" (click)="color='yellow'">Yellow
+  <input type="radio" name="colors" (click)="color='cyan'">Cyan
+</div>
+
+<p [appHighlight]="color" defaultColor="violet">
+Highlight me too!
+</p>
